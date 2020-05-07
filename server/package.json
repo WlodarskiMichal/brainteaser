@@ -21,4 +21,12 @@
   "devDependencies": {
     "nodemon": "^2.0.2"
   }
+  {
+    "name": "BrainTeaser",
+    "description": "Trivia Game BrainTeaser",
+    "version": "1.0.0",
+    "engines": {
+      "node": "13.2.0"
+    }
+  }
 }
