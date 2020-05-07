@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 
-const scores = require('./api/scores')
+// const scores = require('./api/scores')
 
 // app.use('/api/scores', scores)
 // //Handle production
