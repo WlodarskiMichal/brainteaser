@@ -10,16 +10,16 @@ app.use(bodyParser.json());
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 
-const scores = require('./routes/api/scores')
+const scores = require('./api/scores')
 
-app.use('/api/scores', scores)
-//Handle production
-if(process.env.NODE_ENV === 'production'){
-  //Static folder
-  app.use(express.static(__dirname + '/public/'));
-  //Handle SPA
-  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
-}
+// app.use('/api/scores', scores)
+// //Handle production
+// if(process.env.NODE_ENV === 'production'){
+//   //Static folder
+//   app.use(express.static(__dirname + '/public/'));
+//   //Handle SPA
+//   app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+// }
 
 
 MongoClient.connect('mongodb://localhost:27017')
