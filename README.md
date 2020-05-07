@@ -1,10 +1,10 @@
-##Brainteaser project that is based on popular Trivia Game.
+Brainteaser project that is based on popular Trivia Game.
 
 You can play it on https://brain-teaser.herokuapp.com/
 
 Or install it locally:
 
-##Server
+Server
 Install server dependencies:
 ```
 cd server
@@ -19,7 +19,7 @@ Run express:
 npm run server:dev
 ```
 
-##Client
+Client
 ```
 cd ../client
 npm install
