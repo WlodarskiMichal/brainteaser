@@ -1,4 +1,5 @@
 const express = require('express');
+const port = process.env.PORT || 8080;
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -6,6 +7,12 @@ const cors = require("cors");
 
 app.use(cors())
 //Middleware
+
+app.use(express.static(__dirname + "/dist/"));
+
+app.get(/.*/, (req, res) => res.sendFile(__dirname + '/dist/index.html'));
+
+
 app.use(bodyParser.json());
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
@@ -31,6 +38,6 @@ MongoClient.connect('mongodb://localhost:27017')
   })
   .catch(console.error);
 
-  app.listen(3000, function() {
+  app.listen(port, function() {
     console.log(`Quiz server running on port ${this.address().port}`);
   });
